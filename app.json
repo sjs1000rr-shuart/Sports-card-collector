@@ -1,0 +1,34 @@
+{
+  "expo": {
+    "name": "Sports Card Collector",
+    "slug": "sports-card-collector",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "backgroundColor": "#0F172A"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yourname.sportscardcollector",
+      "infoPlist": {
+        "NSCameraUsageDescription": "We need camera access so you can scan and photograph your sports cards.",
+        "NSPhotoLibraryUsageDescription": "Allow access to your photo library to attach card images."
+      }
+    },
+    "android": {
+      "package": "com.yourname.sportscardcollector",
+      "permissions": ["CAMERA", "READ_EXTERNAL_STORAGE", "WRITE_EXTERNAL_STORAGE"]
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera to scan cards."
+        }
+      ]
+    ]
+  }
+}
